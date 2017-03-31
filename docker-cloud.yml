@@ -1,0 +1,10 @@
+backend:
+  image: ionatansala/docker-node-backend
+  autorestart: always
+  ports:
+    - 80:8000
+  roles:
+    - global
+  environment:
+    - PORT=8000
+  deployment_strategy: high_availability
