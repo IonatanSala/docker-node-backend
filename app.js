@@ -12,7 +12,7 @@ const userSchema = new Schema({
 const User = mongoose.model('user', userSchema);
 
 app.get('/', (req, res, next) => {
-  const newUser = new User({name: 'Jonatan' + new Date()});
+  const newUser = new User({name: 'Solomon' + new Date()});
   newUser.save()
     .then(u => User.find({}))
     .then(users => res.json(users));
